@@ -76,7 +76,7 @@ void loop() {
   client.publish("outSoilMoisture01", String(soilMoisturePercent).c_str());
 
   /* Bei zu trockener Erde blinkt die LED */
-  if (soilMoisturePercent < 30) {
+  if (soilMoisturePercent < 50) {
     LEDValue = 1024;
     analogWrite(LEDPIN, LEDValue);
     delay(50);
@@ -87,6 +87,6 @@ void loop() {
   delay(5000);
 
   /* Wenn die Bodenfeuchte OK ist, Energiesparmodus für 10 Minuten aktivieren */
-  if (soilMoisturePercent > 30) ESP.deepSleep(10 * 60 * 1000000);
+  if (soilMoisturePercent > 50) ESP.deepSleep(10 * 60 * 1000000);
 
 }
