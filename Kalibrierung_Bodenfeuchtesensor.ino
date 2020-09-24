@@ -13,7 +13,7 @@ int soilMoistureValue = 0;
 void setup() {
   /* Der Kalibrierungswert wird am Seriellen Monitor ausgegeben. 
   Im Seriellen Monitor die Baudrate bitte auf den definierten Wert von 9600 einstellen.
-  Nur so können die Daten im Seriellen Monitro angezeigt werden können*/
+  Nur so können die Daten im Seriellen Monitor angezeigt werden können*/
   Serial.begin(9600);
 }
 
